@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Viewer</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <h1>PDF Viewer <span id="dimensions"></span></h1>
+    <label for="pdfInput">PDF file</label>
+    <input type="file" id="pdfInput" accept=".pdf">
+
+    <label for="jsonInput">JSON file</label>
+    <input type="file" id="jsonInput" accept=".json">
+    <table>
+        <tr>
+            <th>
+                <div id="pdfContainer"></div>
+                <div class="navigation">
+                    <button id="prevButton" disabled>Previous</button>
+                    <button id="downloadButton" onclick="downloadData()">download</button>
+                    <button id="nextButton" disabled>Next</button>
+                </div>
+            </th>
+            <th>
+                <div id="json-container"></div>
+            </th>
+        </tr>
+    </table>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
